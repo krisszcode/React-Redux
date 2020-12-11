@@ -15,10 +15,9 @@ export class AddNinja extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
+        console.log(this.state)
         this.props.addNinja(this.state)
     }
-
-    
 
     render() {
         return (
@@ -26,9 +25,9 @@ export class AddNinja extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor="name">Name:</label>
                     <input type="text" id="name" onChange={this.handleChange}/>
-                    <label htmlFor="name">Age:</label>
+                    <label htmlFor="age">Age:</label>
                     <input type="text" id="age" onChange={this.handleChange}/>
-                    <label htmlFor="name">Belt:</label>
+                    <label htmlFor="belt">Belt:</label>
                     <input type="text" id="belt" onChange={this.handleChange}/>
                     <button>Submit</button>
                 </form>
